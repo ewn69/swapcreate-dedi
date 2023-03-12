@@ -77,7 +77,7 @@ echo "* How many GB of swap space do you want to create? [ ex: 128 ]"
 read -p "* Input 1-512: " swap_size
 
 # Validate swap size
-if ! [[ "$swap_size" =~ ^[1-9][0-9]?$|^512$ ]]; then
+if ! [[ "$swap_size" =~ ^[1-9][0-9]{0,2}$|^512$ ]]; then
   echo "* Invalid input. Swap size must be a number between 1-512."
   exit 1
 fi
